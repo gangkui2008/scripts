@@ -27,7 +27,7 @@ fi
 
 i=1
 #Only search high quality songs that < 100M.
-find $src -type f -size -100M \( -name *.wav -o -name *.flac -o -name *.m4a \) | while read song
+find "$src" -type f -size -100M \( -name *.wav -o -name *.flac -o -name *.m4a \) | while read song
 do
   songName=$(basename "$song")
   parentDir=$(dirname "$song")
